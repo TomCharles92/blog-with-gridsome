@@ -10,6 +10,14 @@ import './assets/css/index.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
+  Vue.mixin({
+    data () {
+      return {
+        GRIDSOME_STRAPI_URL: process.env.GRIDSOME_STRAPI_URL
+      }
+    }
+  })
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }

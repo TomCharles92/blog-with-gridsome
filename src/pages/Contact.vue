@@ -128,7 +128,7 @@ export default {
       try {
         await axios({
           method: "POST",
-          url: "http://localhost:1337/contacts",
+          url: `${GRIDSOME_STRAPI_URL}/contacts`,
           data: this.form
         })
         alert("发送成功")
